@@ -10,6 +10,11 @@ public class Movimiento : MonoBehaviour
     public float jumpForce = 5f; // Fuerza del salto
     public float rotationSpeed = 10f; // Velocidad de rotación del personaje
     public float cameraFollowSpeed = 5f; // Velocidad de seguimiento de la cámara
+    public float dashSpeed = 20f;         // Velocidad del dash
+    public float dashDuration = 0.2f;     // Duración del dash
+    private float dashTime = 0f;          // Tiempo que ha pasado desde que comenzó el dash
+    private bool isDashing = false;       // Si el jugador está en "dash"
+
 
     [Header("Camera Settings")]
     public float cameraDistance = 5f; // Distancia de la cámara al personaje
@@ -46,6 +51,17 @@ public class Movimiento : MonoBehaviour
 
     void HandleMovement()
     {
+        //// Si el jugador presiona Shift, realiza un dash
+        //if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing)
+        //{
+        //    StartCoroutine(dashSpeed(walkSpeed));
+        //}
+
+        //// Mueve al jugador dependiendo si está haciendo dash o no
+        //if (!isDashing)
+        //{
+        //    transform.Translate(walkSpeed * dashSpeed * Time.deltaTime, Space.World);
+        //}
         float speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed; // Determinar si el personaje camina o corre
         float moveX = Input.GetAxis("Horizontal"); // Entrada en el eje horizontal (A/D o flechas izquierda/derecha)
         float moveZ = Input.GetAxis("Vertical"); // Entrada en el eje vertical (W/S o flechas arriba/abajo)
