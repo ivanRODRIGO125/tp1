@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     }
 
     void Update()
+
+
     {
          totalCoins = Monedas.totalCoins;
         // Verifica si la vida llegó a 0
@@ -29,6 +31,8 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reinicia la escena
         }
+
+        
     }
 
     public void CheckWinCondition(int coinsCollected)
@@ -38,6 +42,9 @@ public class GameManager : MonoBehaviour
             WinGame();
         }
     }
+    
+    
+   
 
     void GameOver()
     {
@@ -53,4 +60,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("¡Has ganado!");
         // Aquí puedes agregar una pantalla de victoria
     }
+
+
+    
 }

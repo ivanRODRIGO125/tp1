@@ -15,11 +15,13 @@ public class Monedas : MonoBehaviour
             coinsCollected++;
             UpdateUI();
             GameManager.Instance.CheckWinCondition(coinsCollected);
+            
         }
     }
 
     void UpdateUI()
     {
-        coinCounterText.text = "Monedas: " + coinsCollected + "/" + totalCoins;
+        
+            coinCounterText.text = "Monedas: " + coinsCollected + "/" + totalCoins;
     }
 }
