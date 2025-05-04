@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7804613479767774443}
   - component: {fileID: 5729216342488762582}
   m_Layer: 0
-  m_Name: "Zona Da\xF1o Caida"
+  m_Name: lava falsa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
