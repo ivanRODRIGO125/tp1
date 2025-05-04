@@ -18,19 +18,17 @@ public class BarraDeVida : MonoBehaviour
     }
     public void Update()
     {
-        if (GetComponent<inmortal>().TienePildoraInmortal = true && Input.GetKeyDown(KeyCode.C))
+
+        if (Input.GetKeyDown(KeyCode.H))
         {
-            GetComponent<inmortal>().Inmortal = true;
-
-
-            if (GetComponent<inmortal>().Inmortal = true && currentHealth < 0) {currentHealth = 1; UpdateHealthBar(); }
-              }
-
+            Heal(15); // Curación de prueba
+            UpdateHealthBar(); // Actualizar la barra al inicio
+        }
 
 
 
 
-            if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             TakeDamage(10);
         }
@@ -50,8 +48,13 @@ public class BarraDeVida : MonoBehaviour
             Die(); // Llamar a la función de muerte si la vida llega a 0
         }
     }
-
-    void UpdateHealthBar()
+    public void Heal(float healAmount)
+    {
+        currentHealth += healAmount; // Aumentar la vida
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth); // Evitar que se pase de la vida máxima
+        UpdateHealthBar(); // Actualizar la UI
+    }
+    public void UpdateHealthBar()
     {
         
         if (healthBar != null)

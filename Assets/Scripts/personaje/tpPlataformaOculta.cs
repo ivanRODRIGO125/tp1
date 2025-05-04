@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class tp : MonoBehaviour
+public class tpPlataformaOculta : MonoBehaviour
 {
+    // Start is called before the first frame update
     public GameObject Player;
     public GameObject tpPosition;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("tp"))// si colisiopna con pildora
+        if (other.CompareTag("tp oculto"))// si colisiopna con pildora
 
-        {Player.transform.position = tpPosition.transform.position;
-            
+        {
+            Player.transform.position = tpPosition.transform.position;
+
 
 
 
@@ -22,8 +23,8 @@ public class tp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-   
+    
 }
