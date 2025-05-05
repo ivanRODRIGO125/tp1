@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.99974084, g: 0.99974084, b: 0.99974084, a: 1}
+  m_IndirectSpecularColor: {r: 0.99999905, g: 0.99999905, b: 0.99999905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1261,7 +1261,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -6194,7 +6194,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -6650,11 +6650,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1019732407
@@ -6717,7 +6717,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.0005638834, y: 0.7027052, z: -0.7114808, w: -0.00055682095}
   m_LocalPosition: {x: 595.01, y: -433.46, z: 18.61}
-  m_LocalScale: {x: 4.2142615, y: 2.6973, z: 2.6973}
+  m_LocalScale: {x: 5.2307415, y: 2.6973, z: 2.6973}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -10160,8 +10160,8 @@ Transform:
   m_GameObject: {fileID: 1582965576}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 595, y: -447, z: -5.2}
-  m_LocalScale: {x: 5.252022, y: 13.612612, z: 5.2052636}
+  m_LocalPosition: {x: 595, y: -447, z: 9.2}
+  m_LocalScale: {x: 5.252022, y: 13.612612, z: 9.005106}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
