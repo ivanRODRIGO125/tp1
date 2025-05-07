@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GroundedBlue : MonoBehaviour
 {
+    public tp tpReferencia;
+    public BarraDeVida barraDeVida;
     // Método para comparar colores con tolerancia
     bool IsColorApproximately(Color a, Color b, float tolerance = 0.1f)
     {
@@ -35,8 +37,9 @@ public class GroundedBlue : MonoBehaviour
         if (IsColorApproximately(playerColor, Color.blue) &&
             !IsColorApproximately(otherColor, Color.blue))
         {
-            Destroy(gameObject);
-            SceneManager.LoadScene(0);
+            barraDeVida.TakeDamage(40);
+            barraDeVida.UpdateHealthBar();
+            tpReferencia.Player.transform.position = tpReferencia.tpPosition.transform.position;
         }
     }
 }
